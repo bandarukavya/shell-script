@@ -8,13 +8,10 @@
 git add <filename>
 '''
 * Commit the changes
-
 '''
 git commit -m "why-u-committed"
 '''
-
 * Push the chnages to Github/Central Repo
-
 '''
 git push -u origin main
 '''
