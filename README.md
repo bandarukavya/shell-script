@@ -16,5 +16,8 @@ git commit -m "why-u-committed"
 git push -u origin main
 '''
 
-
 **Naming convention: use small case with Hyphons(-). No spaces** 
+
+'''
+git add . ; git commit -m "some-message" ; git push -u origin main
+'''
