@@ -17,4 +17,4 @@ git push -u origin main
 '''
 
 
-** Naming convention: use small case with Hyphons(-). No spaces **
+# Naming convention: use small case with Hyphons(-). No spaces 
