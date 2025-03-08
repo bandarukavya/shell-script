@@ -11,11 +11,10 @@ else
 fi
 
 VALIDATE(){
-    if [ $? -ne 0 ]
-    then
+   
         echo "exit status $1"
         echo "What are you doing? $2"
-    fi
+        
 }
 
 
