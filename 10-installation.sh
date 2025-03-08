@@ -16,8 +16,17 @@ if [ $? -ne 0 ]
 then
     echo "Installation of Mysql...FAILED"
     exit 1
+else
+    echo "Installation of Mysql...Success"
 fi 
 
 dnf install git -y
+if [ $? -ne 0 ]
+then   
+    echo "Installation of Git...FAILED"
+    exit 1
+else
+    echo "Installation Git...SUCCESS"
+fi
 
 echo "is script proceeding?"
