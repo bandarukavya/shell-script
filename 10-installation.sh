@@ -10,23 +10,21 @@ else
     echo "You are super user."
 fi
 
+VALIDATE(){
+    if [ $? -ne 0 ]
+    then
+        echo "exit status $1"
+        echo "What are you doing? $2"
+    fi
+}
+
 
 dnf install mysql -y
-if [ $? -ne 0 ]
-then
-    echo "Installation of Mysql...FAILED"
-    exit 1
-else
-    echo "Installation of Mysql...Success"
-fi 
+VALIDATE $? "Installaing MYSQL"
+
 
 dnf install git -y
-if [ $? -ne 0 ]
-then   
-    echo "Installation of Git...FAILED"
-    exit 1
-else
-    echo "Installation Git...SUCCESS"
-fi
+VALIDATE $? "Installing Git"
+
 
 echo "is script proceeding?"
