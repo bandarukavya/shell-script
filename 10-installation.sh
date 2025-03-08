@@ -11,15 +11,17 @@ else
 fi
 
 VALIDATE(){
-   
-        echo "exit status $1"
-        echo "What are you doing? $2"
-        
+    if [ $? -ne 0 ]
+    then
+        echo "$2...FAILED"
+    else
+        echo "$2...SUCCESS"
+    fi
 }
 
 
 dnf install mysql -y
-VALIDATE $? "Installaing MYSQL"
+VALIDATE $? "Installing MYSQL"
 
 
 dnf install git -y
