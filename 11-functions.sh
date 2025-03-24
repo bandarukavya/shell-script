@@ -11,8 +11,13 @@ else
 fi
 
 VALIDATE(){
-    echo "Exit Status: $1"
-    echo "What are you doing: $2"
+    if [ $1 -ne 0 ]
+    then
+        echo "$2... FAILURE"
+    else
+        echo "$2... SUCCESS"
+
+    fi    
 }
 
 dnf install mysql -y
